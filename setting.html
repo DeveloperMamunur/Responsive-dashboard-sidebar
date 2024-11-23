@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <aside class="">
+        <h1><i class="fa-solid fa-gauge"></i>Dashboard</h1>
+        <ul class="sideMenu">
+            <li class="menuItem"><a class="link" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li class="menuItem dropMenu"><i class="fa-solid fa-user"></i>Users <span class="rotate">&#10095;</span>
+                <ul class="submenu">
+                    <li><a href="user-index.html" class="link dropItem"><span class="link_icon">&#9737;</span>Index</a></li>
+                    <li><a href="user-create.html" class="link dropItem"><span class="link_icon">&#9737;</span>Create</a></li>
+                    <li><a href="user-edit.html" class="link dropItem"><span class="link_icon">&#9737;</span>Edit</a></li>
+                    <li><a href="user-show.html" class="link dropItem"><span class="link_icon">&#9737;</span>Show</a></li>
+                </ul>
+            </li>
+            <li class="menuItem dropMenu"><i class="fa-brands fa-product-hunt"></i> Products <span class="rotate">&#10095;</span>
+                <ul class="submenu">
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Index</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Create</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Edit</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Show</a></li>
+                </ul>
+            </li>
+            <li class="menuItem dropMenu"><i class="fa-brands fa-sellcast"></i>Saller <span class="rotate">&#10095;</span>
+                <ul class="submenu">
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Index</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Create</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Edit</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Show</a></li>
+                </ul>
+            </li>
+            <li class="menuItem dropMenu"><i class="fa-solid fa-layer-group"></i>Category <span class="rotate">&#10095;</span>
+                <ul class="submenu">
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Index</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Create</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Edit</a></li>
+                    <li><a href="#" class="link dropItem"><span class="link_icon">&#9737;</span>Show</a></li>
+                </ul>
+            </li>
+            <li class="menuItem"><a class="link active" href="setting.html"><i class="fa-solid fa-gear"></i>Setting</a></li>
+            <li class="menuItem"><a class="link" href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+        </ul>
+    </aside>
+    <main>
+        <nav class="topNav">
+            <a id="humbarger" href="#">&#9776;</a>
+            <ul>
+                <li><a href="#">&#128269;</a></li>
+                <li class="dropArea">
+                    <button class="notifiyNum dropBtn">&#x1F514;<span class="tuplip">18</span></button>
+                    <div class="dropContent notification">
+                        <ul>
+                            <a href="#" class="nt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, natus.</a>
+                            <a href="#" class="nt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, natus.</a>
+                            <a href="#" class="nt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, natus.</a>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropArea">
+                    <button class="dropBtn"><i class="fa-regular fa-circle-user"></i></button>
+                    <div class="dropContent">
+                        <ul>
+                            <li>Md Mamun</li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="content_area">
+            <h1>Home Page</h1>
+        </section>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+<html>

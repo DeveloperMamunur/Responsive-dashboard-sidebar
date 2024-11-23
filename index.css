@@ -1,0 +1,269 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+}
+
+/*=================  Side Menu Start   ==================*/
+aside{
+    width: 250px;
+    background: #ff3bf8;
+    padding: 10px;
+    margin-right: 1px;
+    transition: width 0.5s ease-in-out;
+    container: sidebar / inline-size;
+}
+
+aside.smallWidth{
+    width: 60px;
+}
+aside h1{
+    padding: 10px;
+    color: #eee;
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 30px;
+}
+
+aside i{
+    margin-right: 16px;
+}
+
+.menuItem{
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    line-height: 40px;
+}
+
+.link,
+.dropMenu{
+    width: 100%;
+    line-height: 40px;
+    padding: 5px 14px;
+    background: #f00de8;
+    color: #eee;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    display: block;
+    overflow: hidden;
+}
+
+.link{
+    line-height: 40px;
+}
+
+.menuItem i{
+    margin-right: 13px;
+}
+
+.menuItem .rotate{
+    float: right;
+    transition: 0.3s ease;
+}
+
+aside.smallWidth .rotate{
+    display: none;
+}
+
+.link_icon{
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.menuItem.active,
+.menuItem:hover{
+    background: #b604b0;
+    color: #fff;
+}
+
+
+
+.submenu{
+    margin-top: 10px;
+    display: none;
+    transition: 300ms ease-in-out;
+}
+
+.menuItem.show > .submenu{
+    display: block;
+}
+
+
+.menuItem.show > span.rotate{
+    transform: rotate(90deg);
+}
+
+@container sidebar (max-width: 60px) {
+    .menuItem.show > .submenu{
+        display: none;
+    }
+}
+
+.link.active,
+.link:hover{
+    background: #92048d;
+    color: #fff;
+}
+
+
+
+
+
+
+/*=================  main Content area Start   ==================*/
+
+main{
+    /* display: grid; */
+    flex: 3 3 auto;
+}
+
+
+/*=================  header area start   ==================*/
+nav.topNav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 50px;
+    background: #ff3bf8;
+    padding: 0 20px;
+    z-index: 1;
+    overflow: visible;
+}
+
+nav.topNav ul{
+    display: flex;
+    gap: 15px;
+}
+
+nav.topNav #humbarger{
+    color: #eee;
+    font-size: 20px;
+}
+
+#humbarger:hover{
+    color: #ffff;
+}
+
+button.notifiyNum{
+    position: relative;
+}
+
+span.tuplip{
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    background-color: #ed5858;
+    color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.dropArea{
+    position: relative;
+}
+
+.topNav .dropBtn{
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+
+.dropContent{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #ff3bf8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+.dropContent a{
+    color: #eee;
+    text-decoration: none;
+    display: block;
+}
+
+.dropContent a:hover{
+    color: #fff;
+}
+
+.dropArea:hover .dropContent{
+    display: block;
+    z-index: 100;
+    ul{
+        display: grid;
+        gap: 10px;
+    }
+}
+
+.notification{
+    min-width: 300px;;
+    margin-bottom: 5px;
+}
+
+.notification a.nt-content{
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 22px;
+    color: #fff;
+    background-color: #b604b0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/*=================  Content Area start   ==================*/
+main .content_area{
+    padding: min(30px, 7%);
+}
+
+
+
+
+
+/*======================================================
+*===================  Media query area   ===============
+*======================================================*/
+@media screen and (max-width: 768px) {
+    aside{
+        width: 60px;
+    }
+
+    aside:hover{
+        width: 250px;
+    }
+    aside.smallWidth{
+        width: 250px;
+    }
+    aside .rotate{
+        display: none;
+    }
+
+    aside:hover .rotate{
+        display: block;
+    }
+
+    aside.smallWidth .rotate{
+        display: block;
+    }
+}
+
